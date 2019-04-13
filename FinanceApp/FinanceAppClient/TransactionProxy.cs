@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 13/04/2019 1:22:15 PM
+// Generation date: 13/04/2019 5:55:32 PM
 namespace FinanceAppClient.FinanceAppService.Models
 {
     /// <summary>

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FinanceAppClient
 {
@@ -6,14 +10,15 @@ namespace FinanceAppClient
     {
         static void ListAllProducts(Default.Container container)
         {
-            foreach (var t in container.Transactions)
+            foreach (var p in container.Transactions)
             {
-                Console.WriteLine("{0} {1} ", t.Id, t.Amount);
+                Console.WriteLine("{0} {1}", p.Id, p.Amount);
             }
         }
 
-        static void AddProduct(Default.Container container, FinanceAppService.Models.Transaction product)
+        static void AddProduct(Default.Container container, FinanceAppService.Models.Transaction transaction)
         {
+            container.AddToTransactions(transaction);
             var serviceResponse = container.SaveChanges();
             foreach (var operationResponse in serviceResponse)
             {
@@ -23,21 +28,17 @@ namespace FinanceAppClient
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting...");
             // TODO: Replace with your local URI.
-            string serviceUri = "http://localhost:51323";
+            string serviceUri = "http://localhost:51323/";
             var container = new Default.Container(new Uri(serviceUri));
 
-            var transaction = new FinanceAppService.Models.Transaction()
+            var product = new FinanceAppService.Models.Transaction()
             {
-                Id = 0,
-                Amount = 2.0
+                Amount = 3.0
             };
 
-            AddProduct(container, transaction);
+            AddProduct(container, product);
             ListAllProducts(container);
-
-            Console.ReadKey();
         }
     }
 }
