@@ -9,5 +9,12 @@ namespace FinanceAppService.Models
     {
         public int Id { get; set; }
         public double Amount { get; set; }
+        public string Description { get; set; }
+        public string Class { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id: {Id}, Description: {Description}, Amount: {Amount}, Class: {Class}";
+        }
     }
 }
