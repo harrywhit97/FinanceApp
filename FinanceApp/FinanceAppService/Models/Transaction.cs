@@ -12,10 +12,11 @@ namespace FinanceAppService.Models
         public string Description { get; set; }
         public string Class { get; set; }
         public DateTimeOffset Date { get; set; }
+        public string Location{ get; set; }
 
         public override string ToString()
         {
-            return $"Id: {Id}, Date: {Date}, Description: {Description}, Amount: {Amount}, Class: {Class}";
+            return $"Id: {Id}, Date: {Date}, Description: {Description}, Location: {Location},Amount: {Amount}, Class: {Class}";
         }
     }
 }

@@ -34,18 +34,46 @@ namespace CsvReader
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(',');
-
-
+                    DateTimeOffset.TryParse(values[0], out DateTimeOffset date);
+                    var transaction = new Transaction()
+                    {
+                        Date = GetDate(values),
+                        Amount = GetAmount(values),
+                        Class = GetClass(values),
+                        Description = GetDescription(values),
+                        Location = GetLocation(values)
+                    };
+                    transactions.Add(transaction);
                 }
             }
             return transactions;
         }
-    }
 
-        public Transaction GenerateTransaction(string description, string amount, string date, string transactionClass)
+        private DateTimeOffset GetDate(string[] values)
         {
-            throw new NotImplementedException();
+            DateTimeOffset.TryParse(values[0], out var date);
+            return date;
         }
 
+        private string GetDescription(string[] values)
+        {
+            return values[1] = values[1].Substring(2); ;
+        }
+
+        private string GetLocation(string[] values)
+        {
+            return values[2].Substring(0, values[2].Length - 2); 
+        }
+
+        private string GetClass(string[] values)
+        {
+            return values[6];
+        }
+
+        private double GetAmount(string[] values)
+        {
+            double.TryParse(values[8], out double amount);
+            return amount;
+        }
     }
 }
