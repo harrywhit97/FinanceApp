@@ -1,3 +1,11 @@
 bin/
 *.vs
 Debug/
+*/Debug/
+obj/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
