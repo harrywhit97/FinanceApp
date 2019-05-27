@@ -10,5 +10,6 @@ namespace FinanceAppService.Models
         {
         }
         public DbSet<Transaction> Transactions { get; set; }
+
     }
 }

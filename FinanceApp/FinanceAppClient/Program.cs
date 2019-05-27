@@ -12,7 +12,7 @@ namespace FinanceAppClient
         {
             foreach (var p in container.Transactions)
             {
-                Console.WriteLine("{0} {1}", p.Id, p.Amount);
+                Console.WriteLine(p.ToString());
             }
         }
 

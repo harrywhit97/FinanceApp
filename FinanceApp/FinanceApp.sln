@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceAppService", "Financ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceAppClient", "FinanceAppClient\FinanceAppClient.csproj", "{79AFF692-9A7B-4011-8F69-BB29B32945B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvReader", "CsvReader\CsvReader.csproj", "{CFF11899-5473-4C4D-8EA9-5F964F126749}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{79AFF692-9A7B-4011-8F69-BB29B32945B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79AFF692-9A7B-4011-8F69-BB29B32945B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79AFF692-9A7B-4011-8F69-BB29B32945B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF11899-5473-4C4D-8EA9-5F964F126749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF11899-5473-4C4D-8EA9-5F964F126749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF11899-5473-4C4D-8EA9-5F964F126749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF11899-5473-4C4D-8EA9-5F964F126749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
